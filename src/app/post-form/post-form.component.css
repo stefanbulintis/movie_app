@@ -1,0 +1,40 @@
+.post-form-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .file-input-container {
+    margin-bottom: 10px;
+  }
+  
+  .file-input-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .file-input-container input {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .image-preview {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .rating-container {
+    margin: 10px 0;
+  }
+  

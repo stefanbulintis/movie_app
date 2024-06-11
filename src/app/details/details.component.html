@@ -1,0 +1,45 @@
+<!-- details.component.html
+
+<div *ngIf="postDetails">
+    <h2>{{ postDetails.title }}</h2>
+    <p>Date lansare: {{ postDetails.releaseDate }}</p>
+    <p>Locație: {{ postDetails.location }}</p>
+    <img *ngIf="postDetails.imageUrl" [src]="postDetails.imageUrl" alt="Post Image">
+    <p>Rating: {{ postDetails.rating }}</p>
+    <p>Recenzie: {{ postDetails.content }}</p>
+  </div>
+   -->
+
+   <div *ngIf="movie" class="movie-details-container">
+    <h2>{{ movie.name }}</h2>
+    <img [src]="movie.imageUrl" alt="{{ movie.name }}" class="movie-image">
+    <p><strong>Year:</strong> {{ movie.year }}</p>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+    <p><strong>Rating:</strong> {{ movie.rating }}</p>
+  
+    <div class="trailer-container">
+      <h3>Trailer</h3>
+      <iframe [src]="movie.trailerUrl | safe" frameborder="0" allowfullscreen></iframe>
+    </div>
+  
+    <!-- Secțiunea de comentarii -->
+    <div class="comments-section">
+      <h3>Comments</h3>
+      <div *ngFor="let comment of comments" class="comment">
+        <p>{{ comment.text }}</p>
+        <small>{{ comment.date | date:'short' }}</small>
+      </div>
+      <div class="add-comment">
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Add a comment" [(ngModel)]="newComment"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addComment()">Submit</button>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="!movie">
+    <p>Movie not found.</p>
+  </div>
+  
+  

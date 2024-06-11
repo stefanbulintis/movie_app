@@ -1,0 +1,32 @@
+<div>
+<button mat-raised-button color="primary" (click)="goToPost()">Post recomandation</button>
+<br>
+<button mat-raised-button color="danger">Create group</button>
+</div>
+<div *ngIf="posts.length > 0">
+    <div *ngFor="let post of posts">
+      <div class="post-item">
+        <p>{{ post.content }}</p>
+        <img *ngIf="post.imageUrl" [src]="post.imageUrl" alt="Post Image">
+        <p>Rating: {{ post.rating }}</p>
+        <!-- like-button.component.html -->
+
+
+      </div>
+      
+    </div>
+  </div>
+  <div *ngIf="posts.length === 0">
+    <p>No posts available.</p>
+  </div>
+  
+  <div class="card" style="width: 18rem;">
+    <div class="card" *ngFor="let image of collectionImages">
+        <img [src]="image.url">
+      <div class="card-body">
+        
+        <button mat-raised-button color="primary"  (click)="redirectToDetailsPage(image.id)">Detalii despre film</button><br>
+        <button mat-raised-button color="primary" (click)="toggleLike()" [class.liked]="liked">Like</button>
+       
+      </div>
+  </div>

@@ -1,0 +1,46 @@
+
+button {
+    margin-bottom: 20px;
+  }
+  
+  .post-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    
+  }
+
+  p {
+    margin-top: 10px;
+  }
+  
+  .no-posts {
+    margin-top: 20px;
+  }
+  
+  .card {
+    display: inline-block;
+    margin: 20px;
+    width: 18rem;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-title, .card-text {
+    margin-top: 10px;
+  }
+  
+  .card button {
+    margin-top: 10px;
+  }
+  
